@@ -1,9 +1,10 @@
 {
   "name": "ember-cli-staticboot",
   "version": "0.1.4",
-  "description":
-    "An Ember CLI addon that allows you to prerender Ember.js apps to be served statically.",
-  "keywords": ["ember-addon"],
+  "description": "An Ember CLI addon that allows you to prerender Ember.js apps to be served statically.",
+  "keywords": [
+    "ember-addon"
+  ],
   "license": "MIT",
   "author": "",
   "directories": {
@@ -25,6 +26,7 @@
     "broccoli-plugin": "^1.2.1",
     "broccoli-replace": "^0.12.0",
     "core-object": "^2.0.5",
+    "critical": "^0.9.1",
     "ember-cli-babel": "^6.3.0",
     "fastboot": "^1.1.0",
     "mkdirp": "^0.5.1",
@@ -63,6 +65,9 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "after": "ember-cli-fastboot"
+    "after": [
+      "ember-cli-fastboot",
+      "ember-service-worker"
+    ]
   }
 }
